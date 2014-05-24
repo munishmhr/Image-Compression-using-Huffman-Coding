@@ -1,0 +1,14 @@
+count = 0;
+p=1;
+for i = 1:1:length(e) 
+    if e(i) ~=0
+        runLenCoding(p) = count;
+        p = p+1;
+        runLenCoding(p) = e(i);
+        p = p+1;
+        count = 0;
+    else 
+        count = count +1;
+    end
+end
+runLenCoding = runLenCoding(2:end);
